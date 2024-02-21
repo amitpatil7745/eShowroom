@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './ProductDisplay.css'
 import star_icon from "../Assets/star_icon.png"
 import star_dull_icon from "../Assets/star_dull_icon.png"
+import { ShopContext } from '../../Context/ShopContext'
 
   const ProductDisplay = (props) => {
     const {product} = props;
+    const {addToCart} = useContext(ShopContext);
   return (
     <div className='productdisplay'>
         <div className="productdisplay-left">
@@ -35,7 +37,7 @@ import star_dull_icon from "../Assets/star_dull_icon.png"
             <div className="productdisplay-right-description">
             Our website is a one-stop destination for all things cars. Dive into the world of cutting-edge automotive technology, sleek designs, and powerful engines. Explore a vast collection of the latest car models, from stylish sedans to rugged SUVs, each meticulously crafted to elevate your driving experience. 
             </div>
-            <button>ADD TO CART</button>
+            <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
         </div>
     </div>
   )
