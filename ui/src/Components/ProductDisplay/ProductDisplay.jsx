@@ -17,8 +17,8 @@ import { ShopContext } from '../../Context/ShopContext'
             <img src={product.image} alt="" />
             </div>  
             <div className="productdisplay-img">
-                <img className='productdisplay-main-img' src={product.image} alt="" />
-                </div> 
+                <img className='productdisplay-main-img' src={"data:image/png;base64,"+product.imageData} alt="" />
+            </div> 
         </div>
         <div className="productdisplay-right">
             <h1>{product.name}</h1>
@@ -31,8 +31,8 @@ import { ShopContext } from '../../Context/ShopContext'
                 <p>(122)</p>
             </div>
             <div className="productdisplay-right-prices">
-                <div className="productdisplay-right-price-old">${product.old_price}</div>
-                <div className="productdisplay-right-price-new">${product.new_price}</div>
+                <div className="productdisplay-right-price-old">${product.oldPrice}</div>
+                <div className="productdisplay-right-price-new">${product.newPrice}</div>
             </div>
             <div className="productdisplay-right-description">
             Our website is a one-stop destination for all things cars. Dive into the world of cutting-edge automotive technology, sleek designs, and powerful engines. Explore a vast collection of the latest car models, from stylish sedans to rugged SUVs, each meticulously crafted to elevate your driving experience. 
